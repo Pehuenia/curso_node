@@ -28,10 +28,14 @@ const fs=require('fs');
 // })
 
 //Añadir contenido al archivo txt:
-fs.appendFile('dataCanal.txt', 'Gracias por darle like a este video', (error) => {
-    if (!error) {
-        console.log("¡Contenido agregado!");
-    } else {
-        console.log(`Error: ${error}`);
-    }
-} )
+// fs.appendFile('dataCanal.txt', '\n¡Gracias por darle like a este video!', (error) => {
+//     if (!error) {
+//         console.log("¡Contenido agregado!");
+//     } else {
+//         console.log(`Error: ${error}`);
+//     }
+// } )
+
+
+//Crear una copia del txt
+fs.createReadStream('dataCanal.txt').pipe(fs.createWriteStream('dataCanal_bu.txt'));
