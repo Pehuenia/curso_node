@@ -1,5 +1,6 @@
  const { error } = require('console');
 const fs=require('fs');
+const { arch } = require('os');
 
 //Crear un archivo txt:
 //  fs.writeFile('data1.txt','Marina - Suscribite ahora ',(error)=>{
@@ -38,4 +39,21 @@ const fs=require('fs');
 
 
 //Crear una copia del txt
-fs.createReadStream('dataCanal.txt').pipe(fs.createWriteStream('dataCanal_bu.txt'));
+//fs.createReadStream('dataCanal.txt').pipe(fs.createWriteStream('dataCanal_bu.txt'));
+
+
+
+//Borrar un archivo
+//  fs.unlink('dataCanal_bu.txt', (error) => {
+//     if(error) {
+//        console.log(`Error: ${error}`);
+//    }
+//   })
+
+
+ //Leer todos los archivos. Con readdir se lee un directorio:
+fs.readdir('/.', (error, archivos)=> {
+    archivos.forEach(archivo => {
+        console.log(archivo);
+    })
+})
