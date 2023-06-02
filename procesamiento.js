@@ -1,6 +1,7 @@
 
 const fs = require('fs');
 
+// PROCESAMIENTO ASÍNCRONO:
 // console.log("Inicio")
 // fs.readFile('dataCanal.txt', 'utf-8', (error, data) => {
 //     if(!error) {
@@ -14,6 +15,7 @@ const fs = require('fs');
 
 // console.log("Inicio")
 
+// PROCESAMIENTO SÍNCRONO:
 // const miData= fs.readFileSync('dataCanal.txt', 'utf-8');
 // console.log(miData)
 // console.log("Fin")
